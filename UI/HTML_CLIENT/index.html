@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tables - SB Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">System Employee Crud</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Employees <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html">View Employees</a></li>
+                <li><a href="add-employee.html">Add Employees</a></li>              
+              </ul>
+            </li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Department <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="department.html">View Departments</a></li>
+                <li><a href="add-department.html">Add Department</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Employees </h1>
+            <ol class="breadcrumb">
+              <li><a href="index.html"><i class="fa fa-dashboard"></i> Home</a></li>
+              <li class="active"><i class="fa fa-table"></i> Employees</li>
+            </ol>
+          </div>
+        </div><!-- /.row -->
+
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="table-responsive">
+              <table class="table table-hover table-striped tablesorter">
+                <thead>
+                  <tr>
+                    <th>Sr # <i class=""></i></th>
+                    <th>Employee Name <i class=""></i></th>
+                    <th>Email <i class=""></i></th>
+                    <th>Phone Number <i class=""></i></th>
+                    <th>Hired On <i class=""></i></th>
+                    <th>Salary <i class=""></i></th>
+                    <th>Actions <i class=""></i></th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Husnain Ajmal</td>
+                    <td>hajmal@foo.com</td>
+                    <td>03030303030</td>
+                    <td>24/08/21</td>
+                    <td>100000</td>
+                    <td>  
+                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                   
+                      <button type="button" class="btn btn-success"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Trash </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Usman Ajmal</td>
+                    <td>usman@foo.com</td>
+                    <td>03030303030</td>
+                    <td>24/08/21</td>
+                    <td>100000</td>
+                    <td>  
+                      <!-- Call to action buttons -->
+                      <ul class="list-inline m-0">
+                        <li class="list-inline-item">
+                            <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                        </li>
+                    </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Ali Ajmal</td>
+                    <td>ali@foo.com</td>
+                    <td>03030303030</td>
+                    <td>24/08/21</td>
+                    <td>35353</td>
+                    <td>  
+                      <button type="button" class="btn btn-success"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Aeni Mani</td>
+                    <td>aeni@foo.com</td>
+                    <td>24/08/21</td>
+                    <td>03030303030</td>
+                    <td>45434</td>
+                    <td>  
+                      <button type="button" class="btn btn-success"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+      
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Page Specific Plugins -->
+    <script src="js/tablesorter/jquery.tablesorter.js"></script>
+    <script src="js/tablesorter/tables.js"></script>
+
+  </body>
+</html>
