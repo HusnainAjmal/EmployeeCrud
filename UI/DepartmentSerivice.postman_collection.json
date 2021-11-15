@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "e2f2d469-99cd-45a1-b2eb-86f4bbe93515",
+		"name": "DepartmentSerivice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getDepartments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getDepartments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getDepartments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDepartmentByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "saveDepartment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"departmentName\": \"Department 3\",\r\n  \"managerId\": null\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/saveDepartment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"saveDepartment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDepartment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"departmentName\": \"Development Department\",\r\n  \"managerId\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateDepartment/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateDepartment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

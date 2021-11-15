@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "ea0442b7-57e5-4b7f-92fb-c9bb8715fff9",
+		"name": "EmployeeServices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllEmployees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employee/getAllEmployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"getAllEmployees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllEmployeesWithPagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employee/getAllEmployees/0/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"getAllEmployees",
+						"0",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployeeById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "saveEmployee",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');\r",
+							"\r",
+							"pm.environment.set('currentdate', moment().format((\"YYYY-MM-DD\")));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Husnain\",\r\n    \"lastName\":\"Ajmal\",\r\n    \"email\" : \"cexex\",\r\n    \"phoneNumber\" : \"exexcec4rcr4cx\",\r\n    \"hireDate\" : \"{{currentdate}}\",\r\n    \"salary\" : -10,\r\n    \"managerId\" : 1,\r\n    \"department\" : {\r\n        \"departmentId\":1\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/saveEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"saveEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateEmployee",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment');\r",
+							"\r",
+							"pm.environment.set('currentdate', moment().format((\"YYYY-MM-DD\")));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Husnain\",\r\n    \"lastName\":\"Ajmal\",\r\n    \"email\" : \"hajmal@gmail.com\",\r\n    \"phoneNumber\" : \"03030966241\",\r\n    \"hireDate\" : \"{{currentdate}}\",\r\n    \"salary\" : 100000,\r\n    \"managerId\" : null,\r\n    \"department\" : {\r\n        \"departmentId\":1\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/updateEmployee/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"updateEmployee",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
